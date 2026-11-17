@@ -55,3 +55,31 @@ function calculatePercentage() {
         }, 1500);
     }
 }
+
+let memoryValue = 0;
+
+function memoryAdd() {
+    const value = Number(currentInput);
+    if (Number.isFinite(value)) {
+        memoryValue += value;
+        display.style.borderLeft = '5px solid #ff9800';
+    }
+}
+
+function memorySubtract() {
+    const value = Number(currentInput);
+    if (Number.isFinite(value)) {
+        memoryValue -= value;
+        display.style.borderLeft = '5px solid #ff9800';
+    }
+}
+
+function memoryRecall() {
+    currentInput = String(memoryValue);
+    updateDisplay();
+}
+
+function memoryClear() {
+    memoryValue = 0;
+    display.style.borderLeft = '';
+}
