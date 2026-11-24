@@ -1,98 +1,95 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 body {
+    min-height: 100vh;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    font-family: 'Arial', sans-serif;
+    background: #eef2f7;
+    font-family: Arial, sans-serif;
 }
 
 .calculator {
-    background: white;
+    width: 340px;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    width: 320px;
+    border-radius: 16px;
+    background: #222831;
+    box-shadow: 0 8px 24px #0003;
 }
 
 .display {
-    background: #222;
-    color: #fff;
-    font-size: 2em;
-    padding: 20px;
+    min-height: 64px;
+    margin-bottom: 14px;
+    padding: 16px 12px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #fff;
+    color: #222;
+    font-size: 24px;
     text-align: right;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    min-height: 60px;
-    word-wrap: break-word;
+    overflow-wrap: anywhere;
 }
 
+.memory-buttons,
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-}
-
-button {
-    padding: 20px;
-    font-size: 1.2em;
-    border: none;
-    background: #e3f2fd;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-button:hover {
-    background: #b503c5;
-}
-
-button:active {
-    transform: scale(0.95);
-}
-
-.equals {
-    background: #667eea;
-    color: white;
-    grid-row: span 2;
-}
-
-.equals:hover {
-    background: #5568d3;
-}
-
-.zero {
-    grid-column: span 2;
+    gap: 8px;
 }
 
 .memory-buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
     margin-bottom: 10px;
 }
 
-.memory-btn {
-    padding: 15px;
-    font-size: 1em;
-    background: #ff9800;
-    color: white;
-    border: none;
-    border-radius: 5px;
+.function-select {
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+select,
+button {
+    min-height: 48px;
+    border: 0;
+    border-radius: 8px;
+    font-size: 17px;
+}
+
+select {
+    padding: 0 10px;
+    background: #fff;
+    color: #222;
+}
+
+button {
+    background: #393e46;
+    color: #fff;
     cursor: pointer;
-    transition: all 0.3s;
 }
 
-.memory-btn:hover {
-    background: #f57c00;
+button:hover {
+    background: #505761;
 }
 
-.memory-btn:active {
-    transform: scale(0.95);
+.memory-buttons button,
+.function-select button {
+    background: #1769aa;
+}
+
+.memory-buttons button:hover,
+.function-select button:hover {
+    background: #2185d0;
+}
+
+.equals {
+    grid-column: span 3;
+    background: #f39c12;
+}
+
+.equals:hover {
+    background: #d98500;
 }
